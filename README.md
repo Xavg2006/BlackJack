@@ -55,7 +55,7 @@ No external libraries (like Pygame or Pandas) are required. The game runs on sta
 
 ## 👤 Author
 
-* **Name:** [Xavier]
+* **Name:** Xavier Grand
 * **University:** University of St. Gallen (HSG)
 * **Course:** Programming
 * **Date:** December 2025
