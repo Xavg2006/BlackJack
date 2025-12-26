@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
-import os  # <--- INDISPENSABLE POUR MAC
+import os  # 
 from typing import List, Tuple
 
 # --- 1. CONFIGURATION & CONSTANTS ---
@@ -120,7 +120,7 @@ class BlackJackUltimate:
         self.canvas.coords(self.bg_advice, cx - 250, h - 70, cx + 250, h - 20)
         self.canvas.coords(self.txt_advice, cx, h - 45)
 
-    # --- CORRECTION MAC: Tuer le processus au niveau de l'OS ---
+   
     def force_kill_app(self):
         """Kill the process immediately (prevents Mac spinning wheel)."""
         print("Closing application...")
@@ -128,7 +128,7 @@ class BlackJackUltimate:
             self.root.destroy()
         except:
             pass
-        os._exit(0) # Ceci est la commande "nucléaire" pour Mac
+        os._exit(0) 
 
     def _update_controls(self, mode: str) -> None:
         # 1. Destroy all previous buttons
