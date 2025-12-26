@@ -32,7 +32,7 @@ In accordance with coding best practices, this project focuses on maintainabilit
 
 ---
 
-## 📦 How to Run
+##  How to Run
 
 No external libraries (like Pygame or Pandas) are required. The game runs on standard Python.
 
@@ -53,7 +53,7 @@ No external libraries (like Pygame or Pandas) are required. The game runs on sta
 
 ---
 
-## 👤 Author
+##  Author
 
 * **Name:** Xavier Grand
 * **University:** University of St. Gallen (HSG)
