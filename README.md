@@ -38,12 +38,12 @@ No external libraries (like Pygame or Pandas) are required. The game runs on sta
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/Xavg2006/BlackJack.git
+    git clone [https://github.com/Xavg2006/BlackJack.git](https://github.com/Xavg2006/BlackJack.git)
     ```
 
 2.  **Navigate to the folder:**
     ```bash
-    cd YOUR_REPO_NAME
+    cd BlackJack
     ```
 
 3.  **Run the game:**
@@ -53,7 +53,7 @@ No external libraries (like Pygame or Pandas) are required. The game runs on sta
 
 ---
 
-##  Author
+## 👤 Author
 
 * **Name:** Xavier Grand
 * **University:** University of St. Gallen (HSG)
