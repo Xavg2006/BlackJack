@@ -1,6 +1,6 @@
 """
 PROJECT: BLACKJACK ULTIMATE (Stable Mac Version)
-AUTHOR: [YOUR NAME]
+AUTHOR: Xavier Grand
 COURSE: Programming - HSG
 DATE: December 2025
 
