@@ -10,8 +10,8 @@ and a strategic decision-support algorithm (AI).
 
 KEY FEATURES:
 - Object-Oriented Design (Classes for Card and Game Logic).
-- Robust Input Validation[cite: 91].
-- Crash prevention on macOS using os._exit[cite: 108].
+- Robust Input Validation.
+- Crash prevention on macOS using os._exit.
 """
 
 # =============================================================================
@@ -20,22 +20,21 @@ KEY FEATURES:
 import tkinter as tk
 from tkinter import messagebox
 import random
-import os  # Required to force kill the process on macOS to prevent freezing
+import os 
 from typing import List, Tuple
 
-# --- Constants (Avoid Hardcoding)  ---
-# Defined at the top level to ensure maintainability and easy updates.
-COLOR_BG = "#2c3e50"            # Main Background (Dark Blue-Grey)
-COLOR_TABLE = "#27ae60"         # Casino Table Green
-COLOR_TABLE_OUTLINE = "#2ecc71" # Lighter Green Border
-COLOR_ACCENT = "#f1c40f"        # Yellow/Gold for highlights
-COLOR_BTN_ACTION = "#3498db"    # Blue (Standard Actions)
-COLOR_BTN_SPLIT = "#9b59b6"     # Purple (Special Action)
-COLOR_BTN_DEAL = "#2ecc71"      # Green (Deal/Start)
-COLOR_BTN_QUIT = "#e74c3c"      # Red (Destructive Action)
-COLOR_GAME_OVER = "#c0392b"     # Dark Red (Warning/Game Over)
+# --- Constants -----------------------------------------------------
+COLOR_BG = "#2c3e50"            
+COLOR_TABLE = "#27ae60"         
+COLOR_TABLE_OUTLINE = "#2ecc71" 
+COLOR_ACCENT = "#f1c40f"        
+COLOR_BTN_ACTION = "#3498db"    
+COLOR_BTN_SPLIT = "#9b59b6"     
+COLOR_BTN_DEAL = "#2ecc71"      
+COLOR_BTN_QUIT = "#e74c3c"      
+COLOR_GAME_OVER = "#c0392b"     
 
-# Mapping codes to visual symbols for better readability [cite: 11]
+# Mapping codes to visual symbols for better readability 
 SUITS = {'C': '♥', 'D': '♦', 'H': '♣', 'S': '♠'}
 VALUES = {
     2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 
@@ -65,7 +64,7 @@ class Card:
         return self.value
 
     def get_face_value(self) -> int:
-        """Returns the raw face value, useful for checking pairs (e.g., Split logic)."""
+        """Returns the raw face value, useful for checking pairs."""
         if 10 <= self.value < 14: return 10
         return self.value
 
@@ -80,7 +79,7 @@ class Card:
 class BlackJackUltimate:
     """
     Main controller class handling Game Logic, UI Rendering, and State Management.
-    Follows separation of concerns by isolating logic from drawing methods[cite: 55].
+    Follows separation of concerns by isolating logic from drawing methods.
     """
 
     def __init__(self, root: tk.Tk):
@@ -90,15 +89,14 @@ class BlackJackUltimate:
         self.root.configure(bg=COLOR_BG)
 
         # -- Game State Variables --
-        # Using Type Hinting for clarity [cite: 25]
         self.deck: List[Card] = []
-        self.player_hands: List[List[Card]] = []  # List of lists to support Splitting pairs
+        self.player_hands: List[List[Card]] = [] 
         self.player_bets: List[int] = []
-        self.hand_statuses: List[str] = []        # Tracks state: 'Active', 'Bust', 'Stand', 'Blackjack'
+        self.hand_statuses: List[str] = []       
         self.current_hand_index = 0
         self.dealer_hand: List[Card] = []
         
-        self.bankroll = 1000  # Initial money
+        self.bankroll = 1000  
         self.base_bet = 0
         self.is_game_active = False
 
